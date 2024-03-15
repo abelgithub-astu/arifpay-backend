@@ -27,7 +27,12 @@ app.post('/api/create-checkout-session', async (req, res) => {
       let amount = req.body.items.map(e => e.price * e.quantity).reduce((e, c) => e + c)
       console.log(amount);
       const data = {
-        ...req.body,
+        items: [{
+          name: 'Pent House per Night',
+          price: 1500.0,
+          quantity: 1,
+          image: "https://www.thespruce.com/thmb/0mCrVrlgAOLHm03zxtJxMd8RIwQ=/2048x1365/filters:fill(auto,1)/put-together-a-perfect-guest-room-1976987-hero-223e3e8f697e4b13b62ad4fe898d492d.jpg"
+        }, ],
         notifyUrl: `${domainURL}`,
         beneficiaries: [{
           accountNumber: '1000123401446',
