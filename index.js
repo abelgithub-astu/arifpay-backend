@@ -15,7 +15,7 @@ app.use(
 );
 const Arifpay = require('arifpay').default;
 const arifpay = new Arifpay("vYbDITI6j19eJZo0kBRIBPP6uLZ9jtIM")
-const domainURL = "http://localhost:3000";
+const domainURL = "https://arifpay-frontend-sample.vercel.app";
 
 app.post('/api/create-checkout-session', async (req, res) => {
 
