@@ -28,7 +28,7 @@ app.post('/api/create-checkout-session', async (req, res) => {
       console.log(amount);
       const data = {
         ...req.body,
-        notifyUrl: `${domainURL}/webhook`,
+        notifyUrl: `${domainURL}`,
         beneficiaries: [{
           accountNumber: '1000123401446',
           bank: 'CBE',
