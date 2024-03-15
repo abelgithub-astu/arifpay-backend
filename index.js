@@ -26,6 +26,9 @@ app.post('/api/create-checkout-session', async (req, res) => {
         paymentMethods: ["CARD"],
         expireDate: expired,
         nonce: Math.floor(Math.random() * 10000).toString(),
+        cancelUrl: `${domainURL}/error`,
+        errorUrl: `${domainURL}/error`,
+        successUrl: `${domainURL}/success`
       };
   
       const session = await arifpay.checkout.create(data, {
