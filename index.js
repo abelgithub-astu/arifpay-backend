@@ -30,8 +30,8 @@ app.post('/api/create-checkout-session', async (req, res) => {
         ...req.body,
         notifyUrl: `${domainURL}/webhook`,
         beneficiaries: [{
-          accountNumber: '10000000000',
-          bank: 'AWINETAA',
+          accountNumber: '1000123401446',
+          bank: 'CBE',
           amount: amount
         }, ],
         paymentMethods: ["CARD"],
