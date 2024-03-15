@@ -5,14 +5,15 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(
-  cors({
+  cors()
+);
+/* {
     origin: ["http://localhost:3000","https://arifpay-frontend-sample.vercel.app" ],
     methods: ['GET', 'POST','PUT'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
   preflightContinue: false
-  })
-);
+  } */
 const Arifpay = require('arifpay').default;
 const arifpay = new Arifpay("vYbDITI6j19eJZo0kBRIBPP6uLZ9jtIM")
 const domainURL = "https://arifpay-frontend-sample.vercel.app";
