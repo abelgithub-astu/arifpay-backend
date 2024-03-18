@@ -38,9 +38,9 @@ app.post('/api/create-checkout-session', async (req, res) => {
         }, ],
         notifyUrl: `${domainURL}`,
         beneficiaries: [{
-          accountNumber: '1000123401446',
-          bank: 'CBE',
-          amount: amount
+          accountNumber: '10000000000',
+        bank: 'AWINETAA',
+        amount: amount
         }, ],
         paymentMethods: ["CARD"],
         expireDate: expired,
