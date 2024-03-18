@@ -49,7 +49,7 @@ app.post('/api/create-checkout-session', async (req, res) => {
         errorUrl: `${domainURL}/error`,
         successUrl: `${domainURL}/success`
       };
-  
+  console.log(data)
       const session = await arifpay.checkout.create(data, {
         sandbox: true
       });
