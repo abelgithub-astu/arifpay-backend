@@ -45,7 +45,7 @@ app.post('/api/create-checkout-session', async (req, res) => {
         paymentMethods: ["CARD"],
         expireDate: expired,
         nonce: Math.floor(Math.random() * 10000).toString(),
-        cancelUrl: `${domainURL}/error`,
+        cancelUrl: `${domainURL}/notify`,
         errorUrl: `${domainURL}/error`,
         successUrl: `${domainURL}/success`
       };
