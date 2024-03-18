@@ -10,6 +10,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(
   cors()
 );
+
 /* {
     origin: ["http://localhost:3000","https://arifpay-frontend-sample.vercel.app" ],
     methods: ['GET', 'POST','PUT'],
